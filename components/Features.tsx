@@ -9,11 +9,13 @@ import {
 import image from "../assets/growth.png";
 import image3 from "../assets/reflecting.png";
 import image4 from "../assets/looking-ahead.png";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface FeatureProps {
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
 }
 
 const features: FeatureProps[] = [
@@ -85,11 +87,13 @@ export const Features = () => {
             <CardContent>{description}</CardContent>
 
             <CardFooter>
-              <img
-                src={image}
-                alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
-              />
+            <Image
+      src={image} // Pass the imported StaticImageData
+      alt="About feature"
+      width={300} // Define width (responsive handling built-in)
+      height={0} // Automatically maintain aspect ratio
+      className="mx-auto object-contain"
+    />
             </CardFooter>
           </Card>
         ))}
