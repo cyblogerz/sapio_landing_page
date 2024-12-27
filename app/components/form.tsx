@@ -2,9 +2,9 @@
 
 import clsx from "clsx";
 import { useOptimistic, useRef, useTransition } from "react";
-import { saveFeature, upvote } from "./actions";
 import { v4 as uuidv4 } from "uuid";
-import { Feature } from "./types";
+import { Feature } from "../pages/types/types";
+import { saveFeature, upvote } from "../utils/actions";
 
 function Item({
   isFirst,
