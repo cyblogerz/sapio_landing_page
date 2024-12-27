@@ -15,6 +15,7 @@ import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Cta } from "@/components/Cta";
 import { About } from "@/components/about";
+import { Separator } from "@/components/ui/separator";
 
 function App() {
   return (
@@ -22,15 +23,20 @@ function App() {
       
       <div className="content">
       <Hero />
+      <Separator className="w-[80%]"/>
       <Sponsors />
       <About />
+      <Separator className="w-[80%]"/>
       <HowItWorks />
       <Features />
       <Services />
+      <Separator className="w-[80%]"/>
       <Cta />
+      <Separator className="w-[80%]"/>
       <Testimonials />
+      <Separator className="w-[80%]"/>
       <Team />
-      <Pricing />
+      {/* <Pricing /> */}
       <Newsletter />
       <FAQ />
       </div>

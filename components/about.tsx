@@ -26,11 +26,7 @@ export const About = () => {
                 Company
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+               Sapio is a platform designed to help individuals connect, collaborate, and build meaningful communities. Whether you're a creator, a professional, or someone seeking to grow your network, Sapio provides the tools to find like-minded individuals, discover new opportunities, and work on projects that matter. Our mission is to create a space where ideas thrive, people connect, and innovation flourishes.
               </p>
             </div>
 

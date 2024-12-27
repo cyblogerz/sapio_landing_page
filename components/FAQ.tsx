@@ -1,11 +1,6 @@
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-  } from "@/components/ui/accordion";
-  
-  interface FAQProps {
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
+
+interface FAQProps {
     question: string;
     answer: string;
     value: string;
@@ -13,33 +8,33 @@ import {
   
   const FAQList: FAQProps[] = [
     {
-      question: "Is this template free?",
-      answer: "Yes. It is a free ChadcnUI template.",
+      question: "What is Sapio?",
+      answer:
+        "Sapio is a platform that helps you find like-minded people, collaborate on meaningful projects, and grow within vibrant communities.",
       value: "item-1",
     },
     {
-      question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+      question: "Is Sapio free to use?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+        "Yes, Sapio is free to use for individuals. However, we may introduce premium features in the future.",
       value: "item-2",
     },
     {
-      question:
-        "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
+      question: "Who is Sapio for?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
+        "Sapio is for anyone looking to connect with others—whether you're a tech enthusiast, science nerd, sports fan, or creative artist.",
       value: "item-3",
     },
     {
-      question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-      answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      question: "How do I join a community?",
+      answer:
+        "Once you sign up, you can explore and join communities that align with your interests directly from your dashboard.",
       value: "item-4",
     },
     {
-      question:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
+      question: "What makes Sapio different from LinkedIn?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+        "Unlike LinkedIn, which focuses on professional networking, Sapio is designed for everyone. It connects people based on shared interests and passions, not just career goals.",
       value: "item-5",
     },
   ];
@@ -56,7 +51,7 @@ import {
             Questions
           </span>
         </h2>
-  
+    
         <Accordion
           type="single"
           collapsible
@@ -70,12 +65,12 @@ import {
               <AccordionTrigger className="text-left">
                 {question}
               </AccordionTrigger>
-  
+    
               <AccordionContent>{answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
-  
+    
         <h3 className="font-medium mt-4">
           Still have questions?{" "}
           <a

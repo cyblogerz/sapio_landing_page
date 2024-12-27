@@ -17,48 +17,47 @@ interface TestimonialProps {
 const testimonials: TestimonialProps[] = [
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe",
-    comment: "This landing page is awesome!",
+    name: "Emily Johnson",
+    userName: "@emily_beta",
+    comment:
+      "Sapio has completely transformed how I connect with like-minded people. It's so intuitive and easy to use!",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe1",
+    name: "Michael Brown",
+    userName: "@michael_beta",
     comment:
-      "Lorem ipsum dolor sit amet,empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-  },
-
-  {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe2",
-    comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "I joined a science community on Sapio and found collaborators for my project in no time. Amazing experience!",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe3",
+    name: "Sarah Lee",
+    userName: "@sarah_beta",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "The one-on-one chat feature is a game-changer. I've had meaningful conversations with incredible people.",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe4",
+    name: "James Smith",
+    userName: "@james_beta",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "I discovered a local sports event through Sapio. It’s not just an app, it’s a gateway to new opportunities.",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe5",
+    name: "Olivia Martin",
+    userName: "@olivia_beta",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "The event discovery feature is fantastic! I’ve attended so many great meetups through Sapio.",
+  },
+  {
+    image: "https://github.com/shadcn.png",
+    name: "Daniel Wilson",
+    userName: "@daniel_beta",
+    comment:
+      "Sapio's focus on communities is unlike anything else. It’s like LinkedIn, but so much more personal and fun!",
   },
 ];
-
 export const Testimonials = () => {
   return (
     <section
@@ -69,15 +68,16 @@ export const Testimonials = () => {
         Discover Why
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          People Love{" "}
+          Beta Testers Love{" "}
         </span>
-        This Landing Page
+        Sapio
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
-        facere hic reiciendis illo
+        Hear from our beta testers about how Sapio is helping them connect,
+        collaborate, and grow within their communities.
       </p>
+
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
         {testimonials.map(

@@ -10,27 +10,27 @@ interface FeatureProps {
 const features: FeatureProps[] = [
   {
     icon: <MedalIcon />,
-    title: "Accessibility",
+    title: "Find Your People",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Discover communities tailored to your interests—tech, science, sports, and more.",
   },
   {
     icon: <MapIcon />,
-    title: "Community",
+    title: "Explore Communities",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Navigate through diverse groups and connect with like-minded individuals.",
   },
   {
     icon: <PlaneIcon />,
-    title: "Scalability",
+    title: "Opportunities Await",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Uncover events, meetups, and projects to expand your horizons.",
   },
   {
     icon: <GiftIcon />,
-    title: "Gamification",
+    title: "Engage and Earn",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Participate in challenges, earn rewards, and track your contributions.",
   },
 ];
 
@@ -40,16 +40,14 @@ export const HowItWorks = () => {
       id="howItWorks"
       className="container text-center py-24 sm:py-32"
     >
-      <h2 className="text-3xl md:text-4xl font-bold ">
+      <h2 className="text-3xl md:text-4xl font-bold">
         How It{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Works{" "}
         </span>
-        Step-by-Step Guide
       </h2>
-      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+      <p className="md:w-3/4 mx-auto mt-4 mb-16 text-xl text-muted-foreground">
+        Sapio is simple—connect, explore, and grow with communities that share your passions.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

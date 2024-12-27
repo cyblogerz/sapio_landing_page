@@ -20,35 +20,34 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "User-Friendly Experience",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Navigate Sapio with ease, thanks to its intuitive and accessible design.",
     image: image4,
   },
   {
-    title: "Intuitive user interface",
+    title: "Community Hub",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Connect, share, and grow within vibrant communities centered around your interests.",
     image: image3,
   },
   {
-    title: "AI-Powered insights",
+    title: "One-on-One Chats",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Engage in private conversations with like-minded individuals to build meaningful connections.",
     image: image,
   },
 ];
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "User-friendly interface",
+  "One-on-one chats",
+  "Community hub",
+  "Interest-based groups",
+  "Event discovery",
+  "Collaborative projects",
+  "Personalized recommendations",
+ 
 ];
 
 export const Features = () => {
@@ -87,13 +86,13 @@ export const Features = () => {
             <CardContent>{description}</CardContent>
 
             <CardFooter>
-            <Image
-      src={image} // Pass the imported StaticImageData
-      alt="About feature"
-      width={300} // Define width (responsive handling built-in)
-      height={0} // Automatically maintain aspect ratio
-      className="mx-auto object-contain"
-    />
+              <Image
+                src={image}
+                alt="About feature"
+                width={300}
+                height={0}
+                className="mx-auto object-contain"
+              />
             </CardFooter>
           </Card>
         ))}
