@@ -46,9 +46,9 @@ export default async function Page() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <main className="flex flex-col items-center justify-center flex-1 px-4 sm:px-20 text-center">
-      <div className="flex justify-center items-center bg-black text-white rounded-[30%] w-16 sm:w-24 h-16 sm:h-24 my-8 shadow-md">
+      {/* <div className="flex justify-center items-center bg-black text-white rounded-[30%] w-16 sm:w-24 h-16 sm:h-24 my-8 shadow-md">
   <p className="text-lg sm:text-2xl font-bold tracking-widest">SAPIO</p>
-</div>
+</div> */}
         <h1 className="text-lg sm:text-2xl font-bold mb-2">
           Help us prioritize our roadmap 🎉
         </h1>
