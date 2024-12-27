@@ -2,7 +2,7 @@
 
 import { kv } from "@vercel/kv";
 import { revalidatePath } from "next/cache";
-import { Feature } from "./types";
+import { Feature } from "../pages/types/types";
 
 export async function saveFeature(feature: Feature, formData: FormData) {
   let newFeature = {
