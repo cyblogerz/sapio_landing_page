@@ -1,5 +1,6 @@
 import { Statistics } from "./Statistics";
 import pilot from "../assets/pilot.png";
+import Image from "next/image";
 
 export const About = () => {
   return (
@@ -9,11 +10,13 @@ export const About = () => {
     >
       <div className="bg-muted/50 border rounded-lg py-12">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
-          <img
-            src={pilot}
-            alt=""
-            className="w-[300px] object-contain rounded-lg"
-          />
+        <Image
+      src={pilot} // Pass the imported image
+      alt="Pilot"
+      width={300} // Desired width
+      height={0} // Maintain aspect ratio (set height to 0 or remove it)
+      className="object-contain rounded-lg"
+    />
           <div className="bg-green-0 flex flex-col justify-between">
             <div className="pb-6">
               <h2 className="text-3xl md:text-4xl font-bold">

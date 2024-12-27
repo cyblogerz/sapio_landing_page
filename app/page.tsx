@@ -14,7 +14,7 @@ import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Cta } from "@/components/Cta";
-import { About } from "@/components/about";
+import { About } from "@/components/About";
 
 function App() {
   return (
