@@ -1,0 +1,16 @@
+@keyframes slideIn {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+      opacity: 0; /* Invisible at the start */
+    }
+    100% {
+      transform: translateX(0); /* Final position */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+  .slide-in-animation {
+    animation: slideIn 1s ease-out 1s forwards; /* Duration: 1.5s, Delay: 2s */
+    will-change: transform, opacity; /* Optimize animation */
+    opacity: 0; /* Hidden initially */
+  }

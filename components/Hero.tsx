@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
@@ -5,11 +6,22 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { DeviceFrameset } from "react-device-frameset";
 import Image from "next/image";
 import '../app/styles/morphing_gradients.scss'
-
+import "../app/styles/slide_in.scss"
 import mockup from "../assets/mockup.png";
 import 'react-device-frameset/styles/marvel-devices.min.css'
+import { useEffect, useState } from "react";
 
 export const Hero = () => {
+  const [showImage, setShowImage] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowImage(true); // Show the image after the animation duration
+    }, 500); // Match the delay in your CSS (2s delay before animation starts)
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []);
+
   return (
     <section className="container grid min-h-[100vh] overflow-hidden lg:grid-cols-2 place-items-center  py-20 md:py-32 gap-10">
       <div className="text-center lg:text-start space-y-6 ">
@@ -58,13 +70,16 @@ export const Hero = () => {
       
       {/* <div className="bubble extra-large" style={{ top: "70%", right: "5%" }}></div> */}
     </div>
-      <div className="absolute bottom-0 right-0  z-0">
+    <div className=" absolute right-10">
+        <HeroCards />
+      </div>
+      <div className="absolute bottom-0 right-0  z-10">
     <Image
       src={mockup}
       alt="Phone in hand mockup"
       width={1080}
       height={1920}
-      className="w-[auto] h-[auto] object-contain md:object-cover"
+      className="w-[auto] h-[auto] object-contain md:object-cover slide-in-animation"
       priority
     />
   </div>
