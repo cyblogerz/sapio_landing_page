@@ -5,8 +5,7 @@ import { useOptimistic, useRef, useTransition } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Feature } from "../pages/types/types";
 import { saveFeature, upvote } from "../utils/actions";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+
 
 function Item({
   isFirst,
@@ -147,10 +146,26 @@ export default function FeatureForm({ features }: { features: Feature[] }) {
             });
           }}
         >
-       <div className="flex w-full  items-center space-x-2">
-      <Input type="text" placeholder="I want... " disabled={state.pending}/>
-      <Button type="submit" disabled={state.pending}>Request</Button>
-    </div>
+          <input
+            aria-label="Suggest a feature for our roadmap"
+            className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border  rounded-xl text-inherit placeholder-gray-400 focus:outline-none focus:ring bg-inherit focus:ring-gray-800"
+            maxLength={150}
+            placeholder="I want..."
+            required
+            type="text"
+            name="feature"
+            disabled={state.pending}
+          />
+          <button
+            className={clsx(
+              "flex items-center justify-center absolute right-2 top-2 px-4 h-10 text-lg border bg-inherit text-inherit rounded-xl w-24 focus:outline-none focus:ring focus:ring-blue-300 focus:bg-gray-800",
+              state.pending && "bg-gray-700 cursor-not-allowed ",
+            )}
+            type="submit"
+            disabled={state.pending}
+          >
+            Request
+          </button>
         </form>
       </div>
       <div className="w-full">

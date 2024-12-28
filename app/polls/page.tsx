@@ -60,7 +60,7 @@ export default async function Page() {
         <div className="flex flex-wrap items-center justify-around max-w-4xl my-8 sm:w-full rounded-xl shadow-xl h-full border border-gray">
           <FeatureForm features={features} />
           <hr className="border-1 border-gray-200 my-8 mx-8 w-full" />
-          <div className="mx-8 w-full">
+          <div className="mx-10 w-full  ">
             <p className="flex text-gray-500">
               Leave your email address here to be notified when feature requests
               are released.
@@ -68,10 +68,11 @@ export default async function Page() {
             <form className="relative my-4" action={saveEmail}>
          
 
-
-    <div className="flex w-full max-w-sm items-center space-x-2">
+<div className="w-full flex justify-center">
+    <div className="flex max-w-sm items-center gap-2 space-x-2 justify-center">
       <Input type="email" placeholder="Email" />
       <Button type="submit">Subscribe</Button>
+    </div>
     </div>
   
 
