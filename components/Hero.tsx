@@ -4,13 +4,14 @@ import { HeroCards } from "./HeroCards";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { DeviceFrameset } from "react-device-frameset";
 import Image from "next/image";
+import '../app/styles/morphing_gradients.scss'
 
 import mockup from "../assets/mockup.png";
 import 'react-device-frameset/styles/marvel-devices.min.css'
 
 export const Hero = () => {
   return (
-    <section className="container grid max-h-[95vh] overflow-hidden lg:grid-cols-2 place-items-center  py-20 md:py-32 gap-10">
+    <section className="container grid min-h-[100vh] overflow-hidden lg:grid-cols-2 place-items-center  py-20 md:py-32 gap-10">
       <div className="text-center lg:text-start space-y-6 ">
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
@@ -52,8 +53,12 @@ export const Hero = () => {
       </div>
 
       {/* Device section */}
+      <div className="animated-gradient-bubbles">
+      <div className="bubble"></div>
       
-      <div className="absolute bottom-0 right-0 z-0">
+      {/* <div className="bubble extra-large" style={{ top: "70%", right: "5%" }}></div> */}
+    </div>
+      <div className="absolute bottom-0 right-0  z-0">
     <Image
       src={mockup}
       alt="Phone in hand mockup"
@@ -63,6 +68,7 @@ export const Hero = () => {
       priority
     />
   </div>
+  
       
 
       {/* Shadow effect */}
