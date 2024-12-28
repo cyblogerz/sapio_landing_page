@@ -4,17 +4,18 @@ import { HeroCards } from "./HeroCards";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { DeviceFrameset } from "react-device-frameset";
 import Image from "next/image";
-import scr3 from "../assets/scr3.png";
+
+import mockup from "../assets/mockup.png";
 import 'react-device-frameset/styles/marvel-devices.min.css'
 
 export const Hero = () => {
   return (
     <section className="container grid max-h-[95vh] overflow-hidden lg:grid-cols-2 place-items-center  py-20 md:py-32 gap-10">
-      <div className="text-center lg:text-start space-y-6 -translate-y-60">
+      <div className="text-center lg:text-start space-y-6 ">
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
             <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-              SAPIO
+              Sapio
             </span>{" "}
             helps you 
           </h1>{" "}
@@ -52,24 +53,16 @@ export const Hero = () => {
 
       {/* Device section */}
       
-      <div className="z-10 -translate-y-80 overflow-hidden rotate-3">
-        <DeviceFrameset
-      
-          device="iPhone X" // Use a device frame (e.g., iPhone 8, iPhone X)
-          color="black" // Frame color
-          width={400} // Adjust the mockup width
-          
-          // height={568} // Adjust the mockup height
-        >
-          <Image
-            src={scr3}
-            alt="App Screenshot"
-            width={500}
-            height={900}
-            className="w-full h-full object-cover"
-          />
-        </DeviceFrameset>
-      </div>
+      <div className="absolute bottom-0 right-0 z-0">
+    <Image
+      src={mockup}
+      alt="Phone in hand mockup"
+      width={1080}
+      height={1920}
+      className="w-[auto] h-[auto] object-contain md:object-cover"
+      priority
+    />
+  </div>
       
 
       {/* Shadow effect */}

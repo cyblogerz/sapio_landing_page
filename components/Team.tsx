@@ -62,7 +62,7 @@ const teamList: TeamProps[] = [
   },
   {
     imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Adwaith Mohan",
+    name: "Random dude",
     position: "Business Manager",
     socialNetworks: [
       {
