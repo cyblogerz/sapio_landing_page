@@ -1,9 +1,11 @@
+"use client"
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
 import cubeLeg from "../assets/cube-leg.png";
 import Image from "next/image";
 import { DeviceFrameset } from "react-device-frameset";
 import scrchat from "../assets/scrchat.png";
+import { useState, useEffect } from "react";
 
 interface ServiceProps {
   title: string;
@@ -33,6 +35,27 @@ const serviceList: ServiceProps[] = [
 ];
 
 export const Services = () => {
+  const [frameWidth, setFrameWidth] = useState<number>(400);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setFrameWidth(380); // Width for small devices
+      } else {
+        setFrameWidth(400); // Default width
+      }
+    };
+
+    // Initial call to set the frame width
+    handleResize();
+
+    // Add resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); 
   return (
     <section className="container py-24 sm:py-32 flex ">
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-start">
@@ -76,12 +99,12 @@ export const Services = () => {
           className="object-contain"
           priority
         /> */}
-<div className="lg:ml-20 overflow-hidden">
+<div className="lg:ml-20 mx-auto">
 <DeviceFrameset
       
       device="iPhone X" // Use a device frame (e.g., iPhone 8, iPhone X)
       color="black" // Frame color
-      width={400} // Adjust the mockup width
+      width={frameWidth} // Adjust the mockup width
       
 
     >
