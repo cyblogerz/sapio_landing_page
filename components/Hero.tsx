@@ -79,7 +79,7 @@ export const Hero = () => {
       alt="Phone in hand mockup"
       width={1080}
       height={1920}
-      className="w-[auto] h-[auto] object-contain md:object-cover slide-in-animation"
+      className="hidden md:block w-[auto] h-[auto] object-contain md:object-cover slide-in-animation"
       priority
     />
   </div>

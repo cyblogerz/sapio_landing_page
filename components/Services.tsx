@@ -76,7 +76,7 @@ export const Services = () => {
           className="object-contain"
           priority
         /> */}
-<div className="ml-20">
+<div className="lg:ml-20 overflow-hidden">
 <DeviceFrameset
       
       device="iPhone X" // Use a device frame (e.g., iPhone 8, iPhone X)

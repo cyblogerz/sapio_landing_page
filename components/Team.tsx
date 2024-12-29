@@ -110,7 +110,7 @@ export const Team = () => {
         dolor pariatur sit!
       </p>
 
-      <div className="flex gap-8 gap-y-10 items-center mx-auto">
+      <div className="flex flex-wrap gap-8 gap-y-10 items-center mx-auto">
         {teamList.map(
           ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
             <Card
